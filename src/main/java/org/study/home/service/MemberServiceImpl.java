@@ -108,7 +108,13 @@ public class MemberServiceImpl implements MemberService {
 	public MemberDTO memberRead2(String user_id) {
 		return mapper.memberRead2(user_id);
 	}
-
+	/* 주문자 정보 */
+	@Override
+	public MemberDTO getMemberInfo(String user_id) {
+		
+		return mapper.getMemberInfo(user_id);
+		
+	}
 
 	
 }

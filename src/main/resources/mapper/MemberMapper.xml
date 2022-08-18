@@ -19,9 +19,9 @@
 
 
 	<insert id="memberInsert">
-		INSERT INTO userTBL (user_id, user_pw, user_nick, user_phone, user_email,
+		INSERT INTO userTBL (user_id, user_pw, user_nick, user_address , user_phone, user_email,
 		user_adult, email_check)
-		VALUES(#{user_id},#{user_pw},#{user_nick}, #{user_phone},#{user_email},#{user_adult},#{email_check})
+		VALUES(#{user_id},#{user_pw},#{user_nick}, #{user_address},#{user_phone},#{user_email},#{user_adult},#{email_check})
 	</insert>
 
 	<!-- <select id="memberIDcheck" resultType="org.study.home.model.MemberDTO"> 
@@ -69,7 +69,7 @@
 	<!-- 주문자 정보 -->
   	<select id="getMemberInfo" resultType="org.study.home.model.MemberDTO">
   	
-  		SELECT user_id, user_nick, user_email 
+  		SELECT user_id, user_nick, user_email, user_address
   		FROM userTBL 
   		WHERE user_id = #{user_id}
   	

@@ -1,18 +1,32 @@
 package org.study.home.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.study.home.model.OrderPageDTO;
+import org.study.home.service.MemberService;
+import org.study.home.service.OrderService;
 
 @Controller
 public class OrderController {
-	@GetMapping("/order/{user_id}")
-	public void orderPgaeGET(@PathVariable("user_id") String user_id, OrderPageDTO opd, Model model) {
+	
+	@Autowired
+	private OrderService orderService;
+	
+	@Autowired
+	private MemberService memberService;
 		
-		System.out.println("user_id : " + user_id);
-		System.out.println("orders : " + opd.getOrders());
+	@GetMapping("/order/{user_id}")
+	public String orderPgaeGET(@PathVariable("user_id") String user_id, OrderPageDTO opd, Model model) {
+		
+		model.addAttribute("orderList", orderService.getGoodsInfo(opd.getOrders()));
+		model.addAttribute("memberInfo", memberService.getMemberInfo(user_id));
+		
+		return "/order";
 		
 	}
+	
+	
 }

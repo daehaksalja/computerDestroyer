@@ -58,7 +58,7 @@
 					<div class="search_wrap">
                 		<form id="searchForm" action="/search" method="get">
                 			<div class="search_input">
-                				<input type="text" name="keyword">
+                				<input type="text" name="keyword" class="searchInput">
                     			<button class='btn search_btn'>검 색</button>                				
                 			</div>
                 		</form>
@@ -89,7 +89,7 @@
 					<div class="search_wrap">
                 		<form id="searchForm" action="/search" method="get">
                 			<div class="search_input">
-                				<input type="text" name="keyword">
+                				<input type="text" name="keyword" class="searchInput">
                     			<button class='btn search_btn'>검 색</button>                				
                 			</div>
                 		</form>

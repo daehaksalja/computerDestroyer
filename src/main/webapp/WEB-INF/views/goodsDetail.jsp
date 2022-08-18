@@ -67,8 +67,8 @@
 							</span>
 						</div>
 						<div class="button_set">
-							<a class="btn_cart">장바구니 담기</a>
-							<a class="btn_buy">바로구매</a>
+							<button class="btn_cart">장바구니 담기</button>
+							<button class="btn_buy">바로구매</button>
 						</div>
 					</div>
 				</div>

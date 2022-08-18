@@ -1,33 +1,30 @@
 @charset "UTF-8";
 
-*{
-	margin: 0;
-	padding:0;
-}
+
 a{
 	text-decoration: none;
 }
-/* 화면 전체 렙 */
-.wrapper{
-	width: 100%;
-}
-/* content 랩 */
-.wrap{
-	width : 1080px;
-	margin: auto;
-}
 
 
+.searchInput{
+	margin-left:69px;
+	width:600px;
+	height: 30px;
+	background-color: transparent;
+	border-color:#00ffff;
+	border-bottom-left-radius: 30px;
+	border-top-right-radius: 30px;
+	color: #00ffff;
+	padding-left: 30px;
+	font-size: 18px;
+}
 
 /* 검색 박스 영역 */
 .search_area{
-	width: 50%;
-	height: 100%;
-	float:left;	
+		
 }
 .search_wrap{
-	width: 100%;
-    height: 100%;
+	
 }
 #searchForm{
 	width: 100%;
@@ -36,29 +33,13 @@ a{
     justify-content: center;
     align-items: center;
 }
-.search_input{
-    display: flex;
-    height: 30%;
-    width: 80%;	
-}
+
 .search_input select{
 	width: 20%;
     text-align: center;
     font-size: 15px;	
 }
-.search_input input{
-    margin-left: 10px;
-    width: 57%;	
-    font-size: 18px;
-    padding-left: 2%;
-}
-.search_btn{
-	margin-left: 10px;
-    width: 17%;
-    border-radius: 14px;
-    font-size: 17px;
-    font-weight: 600;	
-}	
+
 
 
 
@@ -81,3 +62,189 @@ a{
 .clearfix{
 	clear: both;
 }
+
+
+
+
+
+
+
+
+/*무지개버튼*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+:root {
+  --primary: red;
+  --secondary: blue;
+  --s-1:  #005eff ;
+  --s-2:   #00a1ff ;
+  --s-3:  #00c0ff;
+  --s-4: #00ffff;
+
+  /* 저기빈칸은 컬러들어가는곳 */
+}
+
+
+/* 로그인버튼 크기조작은 back으로 */
+.back {
+
+	width: 430px;
+	height:70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5em;
+  font-size: 2em;
+  background: linear-gradient(123deg, black 0%, #042D64) no-repeat top left/150%;
+}
+
+
+
+
+
+
+.btn{
+	
+	padding-top:0px;
+	font-family:sans-serif;
+	width: 100px;
+	margin-top:20px;
+	height: 38px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: url(https://api.thumbr.io/whitenoise-361x370.png?background=00000000&noise=000000f&density=50&opacity=40) repeat top left/1.25em, url(https://www.transparenttextures.com/patterns/green-dust-and-scratches.png) no-repeat center/100%;
+  /* font-family: "Space Mono", monospace; */
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke: 0.025em currentColor;
+  text-shadow: 0.05em 0.075em 0.075em rgba(255, 255, 255, 0.8), 0.05em 0.075em 1em rgba(255, 255, 255, 0.5), -0.04em -0.04em 0.05em rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0.1em 0.1em 0.075em rgba(255, 255, 255, 0.666), inset -0.1em -0.1em 0.2em rgba(0, 0, 0, 0.25), inset 0 0 0.4em rgba(255, 255, 255, 0.25);
+  transition: 0.5s;
+  will-change: filter;
+}
+
+
+
+.btn:before {
+	   text-decoration:none;
+  content: "";
+  z-index: -1;
+  mix-blend-mode: color;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.btn:after {
+	   text-decoration:none;
+  content: "";
+  position: absolute;
+  top: -100%;
+  bottom: -100%;
+  width: 200%;
+  left: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent 10%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9), transparent 20%, transparent 30%, white, rgba(255, 255, 255, 0.75), transparent 70%, transparent, white, rgba(255, 255, 255, 0.75), transparent);
+  mix-blend-mode: overlay;
+  opacity: 0.9;
+  transform: translate3d(-50%, 0, 0);
+  transition: 0.4s;
+}
+.btn:hover:after, .btn:focus:after {
+	
+  transform: translate3d(0%, 0, 0) scale3d(1.5, 1.2, 1);
+}
+
+
+.searchBtn{
+	
+	padding-top:0px;
+	font-family:sans-serif;
+	width: 100px;
+	margin-top:20px;
+	height: 38px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: url(https://api.thumbr.io/whitenoise-361x370.png?background=00000000&noise=000000f&density=50&opacity=40) repeat top left/1.25em, url(https://www.transparenttextures.com/patterns/green-dust-and-scratches.png) no-repeat center/100%;
+  /* font-family: "Space Mono", monospace; */
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke: 0.025em currentColor;
+  text-shadow: 0.05em 0.075em 0.075em rgba(255, 255, 255, 0.8), 0.05em 0.075em 1em rgba(255, 255, 255, 0.5), -0.04em -0.04em 0.05em rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0.1em 0.1em 0.075em rgba(255, 255, 255, 0.666), inset -0.1em -0.1em 0.2em rgba(0, 0, 0, 0.25), inset 0 0 0.4em rgba(255, 255, 255, 0.25);
+  transition: 0.5s;
+  will-change: filter;
+}
+.searchBtn:before {
+	   text-decoration:none;
+  content: "";
+  z-index: -1;
+  mix-blend-mode: color;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.searchBtn:after {
+	   text-decoration:none;
+  content: "";
+  position: absolute;
+  top: -100%;
+  bottom: -100%;
+  width: 200%;
+  left: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent 10%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9), transparent 20%, transparent 30%, white, rgba(255, 255, 255, 0.75), transparent 70%, transparent, white, rgba(255, 255, 255, 0.75), transparent);
+  mix-blend-mode: overlay;
+  opacity: 0.9;
+  transform: translate3d(-50%, 0, 0);
+  transition: 0.4s;
+}
+.searchBtn:hover:after, .searchBtn:focus:after {
+	
+  transform: translate3d(0%, 0, 0) scale3d(1.5, 1.2, 1);
+}
+
+
+
+
+.btn--plain {
+  background: white;
+  -webkit-text-stroke: initial;
+  box-shadow: none;
+  text-shadow: none;
+  transition: none;
+}
+.btn--plain:hover, .btn--plain:focus {
+  background: #cccccc;
+}
+.btn--plain:before, .btn--plain:after {
+  content: none;
+}
+
+.btn--1:before{
+  top: -50%;
+  left: -5%;
+  height: 300%;
+  width: 200%;
+  background: radial-gradient(6% 10% at 77% 20%, var(--s-1) 5%, var(--s-2) 60%, var(--s-2) 65%, var(--s-3) 80%, var(--s-3) 70%, transparent 95%), radial-gradient(25% 69% at 40% 10%, var(--s-1) 40%, var(--s-2) 60%, var(--s-2) 65%, var(--s-3) 80%, var(--s-3) 90%, transparent), radial-gradient(20% 55% at -2% 10%, var(--s-1) 50%, var(--s-2) 70%, var(--s-3) 85%, transparent), radial-gradient(12% 19% at 31% 98%, var(--s-1) 30%, var(--s-2) 60%, var(--s-2) 65%, var(--s-3) 80%, var(--s-3) 0%, transparent), radial-gradient(18% 19% at 0 94%, var(--s-1), var(--s-2) 60%, var(--s-2) 55%, var(--s-3) 70%, var(--s-3) 75%, var(--s-4), transparent), radial-gradient(30% 43% at 73% 83%, var(--s-1) 55%, var(--s-2) 70%, var(--s-2) 65%, var(--s-3), transparent), radial-gradient(40% 50% at 20% 20%, var(--s-3) 20%, var(--s-4), transparent), radial-gradient(40% 65% at 40% 25%, var(--s-3) 50%, var(--s-4), var(--s-1) 80%, transparent 100%), radial-gradient(70% 70% at 110% 85%, var(--s-3), var(--s-4) 90%, transparent), radial-gradient(30% 23% at 5% 65%, var(--s-4), var(--s-1) 40%, var(--s-1) 40%, var(--s-4) 65%, var(--s-4) 70%, var(--s-1), transparent), radial-gradient(100% 100% at 70% 20%, var(--s-3), var(--s-4));
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+}
+.btn--1:hover:before, .btn--1:focus:before {
+  background-position: 100% 0%;
+}
+
+.btn--1:before {
+  filter: url("data:image/svg+xml;utf8,\a<svg xmlns='http://www.w3.org/2000/svg' version='1.1'>\a<defs>\a<filter id='filter' x='-20%' y='-20%' width='140%' height='140%' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'>\a<feTurbulence type='turbulence' baseFrequency='0.04 0.03' numOctaves='12' seed='27' stitchTiles='stitch' x='0%' y='0%' width='100%' height='100%' result='turbulence'/>\a<feDisplacementMap in='SourceGraphic' in2='turbulence' scale='15' xChannelSelector='R' yChannelSelector='B' x='0%' y='0%' width='100%' height='100%' result='displacementMap2'/></filter>\a</defs>\a</svg>\a#filter\a") contrast(1.3);
+} 

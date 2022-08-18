@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/resources/css/search.css">
+<link rel="stylesheet" href="../../../resources/css/search.css">
 <script src="https://code.jquery.com/jquery-3.4.1.js"
    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
    crossorigin="anonymous"></script>
@@ -98,8 +98,8 @@
                 					<option value="T">책 제목</option>
                 					<option value="A">작가</option>
                 				</select>
-                				<input type="text" name="keyword" value="<c:out value="${pageMaker.cri.keyword}"/>">
-                    			<button class='btn search_btn'>검 색</button>                				
+                				<input class="searchInput" type="text" name="keyword" value="<c:out value="${pageMaker.cri.keyword}"/>">
+                    			<button class='searchBtn'>검 색</button>       		
                 			</div>
                 		</form>
                 	</div>

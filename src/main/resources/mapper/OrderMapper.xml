@@ -8,7 +8,7 @@
 	<select id="getGoodsInfo" resultType="org.study.home.model.OrderPageItemDTO">
 	
 		select shipId, shipName, shipPrice
-		from  where shipId = #{shipId}	
+		from shipTBL where shipId = #{shipId}	
 	
 	</select>
 

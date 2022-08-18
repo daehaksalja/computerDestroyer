@@ -45,6 +45,7 @@ public class MemberController {
 	@PostMapping("/memberInsert")
 	public String registProcess(/* @RequestParam("user_id")String user_id, */ MemberDTO dto) {
 		/* memberService.memberIDcheck(user_id); */
+		System.out.println("시발 값"+ dto);
 		memberService.memberInsert(dto);
 		return "redirect:/";
 	}

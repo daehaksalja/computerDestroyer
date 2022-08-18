@@ -25,4 +25,7 @@ public interface MemberService {
 	MemberDTO memberRead2(String user_id);
 	
 	void memberUpdate(MemberDTO dto);
+	
+	/* 주문자 정보 */
+	public MemberDTO getMemberInfo(String user_id);
 }

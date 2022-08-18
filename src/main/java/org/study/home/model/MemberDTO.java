@@ -2,15 +2,14 @@ package org.study.home.model;
 
 import java.sql.Timestamp;
 
-import lombok.Data;
 
-@Data
+
 public class MemberDTO {
 	private int user_no;
 	private String user_id;
 	private String user_pw;
 	private String user_nick;
-	private String address;
+	private String user_address;
 	private String user_phone;
 	private boolean user_adult;
 	private String user_email;
@@ -77,10 +76,20 @@ public class MemberDTO {
 	public void setUser_insertDate(Timestamp user_insertDate) {
 		this.user_insertDate = user_insertDate;
 	}
-	public String getAddress() {
-		return address;
+	
+	public String getUser_address() {
+		return user_address;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setUser_address(String user_address) {
+		this.user_address = user_address;
 	}
+	@Override
+	public String toString() {
+		return "MemberDTO [user_no=" + user_no + ", user_id=" + user_id + ", user_pw=" + user_pw + ", user_nick="
+				+ user_nick + ", user_address=" + user_address + ", user_phone=" + user_phone + ", user_adult="
+				+ user_adult + ", user_email=" + user_email + ", email_check=" + email_check + ", adminCk=" + adminCk
+				+ ", user_insertDate=" + user_insertDate + "]";
+	}
+	
+	
 }
